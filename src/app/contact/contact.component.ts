@@ -18,7 +18,7 @@ export class ContactComponent implements OnInit {
   }
 
   sendMail(): void {
-    this.body = "Poruka: " + this.poruka + "\nIme i prezime: " + this.imePrezime + ((this.mobitel) ? '\nBroj telefona: ' + this.mobitel : '');
+    this.body = "" + this.poruka + "\n\nIme i prezime: " + this.imePrezime + ((this.mobitel) ? '\n\nBroj telefona: ' + this.mobitel : '');
     const subject: string = 'Upit';
     window.open('mailto:info.damawash@gmail.com?subject=' + subject + '&body=' + encodeURIComponent(this.body));
   }
