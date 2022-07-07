@@ -11,9 +11,10 @@ a{text-decoration: none;}
 	text-align: center;
 }
 
-.centrirano span{
+.mySlides span{
 	font-size: 3vmax;
-	text-shadow: 0px 0px 4px #666;
+	text-shadow: 0px 0px 20px #000;
+  font-family: Verdana,sans-serif;
 }
 
 .centrirano{
@@ -21,8 +22,25 @@ a{text-decoration: none;}
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
+  /*width: 100%;*/
 }
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 50%;
+  right: 25%;
+  transform: translate(+50%, +50%);
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 50%;
+  left: 25%;
+  transform: translate(-50%, +50%);
+}
+
 html, body, h1, h2, h3, h4, h5, h6 {
   /*font-family: "Roboto Slab", serif;*/
   font-family: 'Quicksand', sans-serif;
