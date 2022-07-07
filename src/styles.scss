@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+html, body{
+	height:100%;
+	
+}
+.nota{background-color: #1d283c; color: white;}
+a{text-decoration: none;}
+
+.mySlides{
+	position: relative;
+	text-align: center;
+}
+
+.centrirano span{
+	font-size: 3vmax;
+	text-shadow: 0px 0px 4px #666;
+}
+
+.centrirano{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+html, body, h1, h2, h3, h4, h5, h6 {
+  /*font-family: "Roboto Slab", serif;*/
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  
+}
+body{color: #444;}
+.hidden{
+    display: none;
+}
+$footer-height: 300px;
+.moje{max-width:1200px;margin-left:auto;margin-right:auto;}
+.footer{height: $footer-height;}
+.topandcontent{min-height: calc(100vh - $footer-height);}
+.w3-ul li {
+  padding: 8px 0px;}
