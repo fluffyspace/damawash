@@ -1,11 +1,11 @@
 /* The animation code */
-@keyframes example {
+@keyframes example_infinite {
     0% {transform: rotate(-20deg);}
     50% {transform: rotate(20deg);}
     100% {transform: rotate(-20deg);}
 }
 img {
-    animation-name: example;
+    animation-name: example_infinite;
     animation-duration: 10s;
     animation-iteration-count: infinite;
     max-width: 80vw;
@@ -13,6 +13,7 @@ img {
 .parent{
     position: relative;
     height: 50vh;
+    z-index: -1;
 }
 .child{
     position: absolute;
