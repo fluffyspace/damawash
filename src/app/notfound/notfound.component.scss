@@ -1,0 +1,25 @@
+/* The animation code */
+@keyframes example {
+    0% {transform: rotate(-20deg);}
+    50% {transform: rotate(20deg);}
+    100% {transform: rotate(-20deg);}
+}
+img {
+    animation-name: example;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    max-width: 80vw;
+}
+.parent{
+    position: relative;
+    height: 50vh;
+}
+.child{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h1{
+    margin-top: -50px;
+}
