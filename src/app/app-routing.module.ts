@@ -3,15 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { NaslovnaComponent } from './naslovna/naslovna.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 import { PricesComponent } from './prices/prices.component';
 import { UslugeComponent } from './usluge/usluge.component';
 
 const routes: Routes = [
-  { path: '', component: NaslovnaComponent, pathMatch:'full' },
-  { path: 'services', component: UslugeComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'prices', component: PricesComponent },
-  { path: 'about', component: AboutComponent }
+  { path: '', component: NaslovnaComponent, pathMatch:'full', title: 'Dubinsko čišćenje – damawash' },
+  { path: 'services', component: UslugeComponent, title: 'Usluge čišćenja – damawash' },
+  { path: 'contact', component: ContactComponent, title: 'Kontakt – damawash' },
+  { path: 'prices', component: PricesComponent, title: 'Cjenik – damawash' },
+  { path: 'about', component: AboutComponent, title: 'O nama – damawash' },
+  { path: 'sitemap', redirectTo: 'http://google.com' },
+  { path: '**', component: NotfoundComponent}
 ];
 
 @NgModule({

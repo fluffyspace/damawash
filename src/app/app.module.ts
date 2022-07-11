@@ -11,6 +11,8 @@ import { UslugeComponent } from './usluge/usluge.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { PricesComponent } from './prices/prices.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import { PricesComponent } from './prices/prices.component';
     UslugeComponent,
     ContactComponent,
     AboutComponent,
-    PricesComponent
+    PricesComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
