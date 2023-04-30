@@ -18,9 +18,10 @@ export class ContactComponent implements OnInit {
   }
 
   sendMail(): void {
-    this.body = "" + this.poruka + "\n\nIme i prezime: " + this.imePrezime + ((this.mobitel) ? '\n\nBroj telefona: ' + this.mobitel : '');
+    this.body = "" + this.poruka + "\n\nIme i prezime: " + this.imePrezime + ((this.mobitel) ? '\nBroj telefona: ' + this.mobitel : '');
     const subject: string = 'Upit';
-    window.open('mailto:info.damawash@gmail.com?subject=' + subject + '&body=' + encodeURIComponent(this.body));
+    window.open('https://mail.google.com/mail/?view=cm&fs=1&to=info.damawash@gmail.com&su=' + subject + '&body=' + encodeURIComponent(this.body));
+    //window.open('mailto:info.damawash@gmail.com?subject=' + subject + '&body=' + encodeURIComponent(this.body));
   }
 
 }
