@@ -18,7 +18,7 @@
     <div class="w3-bar w3-indigo w3-large" style="min-height: 45px; overflow: visible;">
         <div class="container moje" style="position: relative;">
             <button class="w3-button w3-xlarge w3-hide-medium w3-hide-large w3-mobile" id="navigacijaopen" style="color:white;" (click)="goggle()">{{ opened ? '&times;' : '&#9776;' }}</button>
-            <div class="moje w3-indigo" id="navigacija" [ngClass]="!opened ? 'w3-hide-small' : ''" style="position:absolute;">
+            <div class="moje2 w3-indigo" id="navigacija" [ngClass]="!opened ? 'w3-hide-small' : ''" style="position:absolute;">
                 <!--<button class="w3-bar-item w3-button w3-large w3-hide-medium w3-hide-large w3-mobile" (click)="goggle()">Zatvori &times;</button>-->
                 <a class="w3-bar-item w3-button w3-mobile" routerLink="" (click)="navigateToHome()">Naslovna</a>
                 <!--<a class="w3-bar-item w3-button w3-mobile" routerLink="/services" (click)="navigateToServices()">Usluge</a>-->
