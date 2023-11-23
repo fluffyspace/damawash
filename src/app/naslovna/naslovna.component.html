@@ -22,6 +22,7 @@
     <div class="w3-quarter w3-container feature">Kamen</div>
   </div>
 </div>
+<img hidden *ngFor="let img of images;" [src]="img" (load)="loaded()" />
 <div class="w3-content w3-display-container slike" style="max-width:900px;overflow:hidden"><!--max-height:480px;-->
 
   <!-- Slideshow -->

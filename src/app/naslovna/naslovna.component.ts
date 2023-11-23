@@ -38,7 +38,6 @@ export class NaslovnaComponent implements OnInit {
   loadedcounter = 0;
 
   ngOnInit(): void {
-    this.loadImages()
     interval(this.timeDelay).subscribe(() => this.carousel())
     interval(this.updateInterval).subscribe(() => this.updateProgressBar())
   }
@@ -50,7 +49,7 @@ export class NaslovnaComponent implements OnInit {
     this.timeStart = dateNow;
   }
 
-  loadImages(){
+  /*loadImages(){
     for(let i = 0; i < this.images.length; i++){
       let img = new Image();
       img.onload = () => {
@@ -58,7 +57,7 @@ export class NaslovnaComponent implements OnInit {
       }
       img.src = this.images[i];
     }
-  }
+  }*/
 
   loaded(){
     this.loadedcounter++;
