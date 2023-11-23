@@ -35,8 +35,10 @@ export class NaslovnaComponent implements OnInit {
   , 'New Project(11).jpg'
 ];
   texts: string[] = [];
+  loadedcounter = 0;
 
   ngOnInit(): void {
+    this.loadImages()
     interval(this.timeDelay).subscribe(() => this.carousel())
     interval(this.updateInterval).subscribe(() => this.updateProgressBar())
   }
@@ -46,6 +48,23 @@ export class NaslovnaComponent implements OnInit {
     let dateNow = Date.now()
     this.precentage += (dateNow - this.timeStart)
     this.timeStart = dateNow;
+  }
+
+  loadImages(){
+    for(let i = 0; i < this.images.length; i++){
+      let img = new Image();
+      img.onload = () => {
+        this.loaded();
+      }
+      img.src = this.images[i];
+    }
+  }
+
+  loaded(){
+    this.loadedcounter++;
+    if(this.images.length == this.loadedcounter){
+      //all images loaded
+    }
   }
 
   carousel(): void {
