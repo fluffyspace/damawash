@@ -20,3 +20,12 @@
 
 @media only screen and (max-width: 1200px) {
   .center-on-mobile { width: fit-content;margin-left: auto;margin-right: auto; }}
+
+  @media only screen and (max-width: 400px) {
+    .w3-btn, .w3-button { padding: 8px 12px; }}
+
+    @media only screen and (max-width: 370px) {
+      .w3-btn, .w3-button { padding: 8px 10px; }}
+
+      @media only screen and (max-width: 350px) {
+        .w3-btn, .w3-button { padding: 8px 7px; }}
