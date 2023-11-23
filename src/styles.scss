@@ -28,7 +28,7 @@ a{text-decoration: none;}
 /* Bottom right text */
 .bottom-right {
   position: absolute;
-  bottom: 50%;
+  bottom: 15%;
   right: 25%;
   transform: translate(+50%, +50%);
 }
@@ -36,7 +36,7 @@ a{text-decoration: none;}
 /* Bottom left text */
 .bottom-left {
   position: absolute;
-  bottom: 50%;
+  bottom: 15%;
   left: 25%;
   transform: translate(-50%, +50%);
 }

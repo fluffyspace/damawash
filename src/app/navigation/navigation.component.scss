@@ -4,5 +4,19 @@
   }
 #navigacija{
   animation-name: example;
-  animation-duration: 0.3s;
+  animation-duration: 0.8s;
 }
+.active-link{
+  font-weight: bold;
+}
+.w3-bar-item:hover{
+  background: #006795;
+}
+.anim-left{
+  position: relative;
+  animation: animateleft 0.8s;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .center-on-mobile { width: fit-content;margin-left: auto;margin-right: auto; }}

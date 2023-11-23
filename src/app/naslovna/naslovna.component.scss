@@ -1,0 +1,8 @@
+.feature{
+    text-align: center;
+    padding: 10px;
+    font-size: x-large;
+    font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+    .feature { width: 50%; }}

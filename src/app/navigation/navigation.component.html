@@ -1,66 +1,42 @@
 
 
-
-    <div class="w3-container moje w3-padding-16" style="max-width: 1480px">
+<div class="w3-container moje">
+    <div class="w3-padding-16 center-on-mobile" style="max-width: 1200px;">
   
 
       <div class="w3-container w3-cell w3-padding-xlarge  w3-cell-middle" style="padding-left: 0;">
-       <img [@openClose]="opened ? 'open' : 'closed'" class="w3-image w3-animate-left" src="assets/images/shark2.svg" style="width: 122px;">
+       <img [@openClose]="opened ? 'open' : 'closed'" class="w3-image anim-left" src="assets/images/shark2.svg" style="width: 122px;">
      </div>
      
      <div class="w3-container w3-cell" style="padding:0;min-width: 224px;">
-       <h1 style="margin-bottom: 0;">damawash</h1>
+       <h1 style="margin-bottom: 0;margin-top:0px">damawash</h1>
        <p style="margin-top: 0;">USLUGE DUBINSKOG ČIŠĆENJA</p>
      </div> 
      
      
      </div>
-    <div class="w3-bar w3-indigo w3-large" style="min-height: 45px; overflow: visible;">
-        <div class="container moje" style="position: relative;">
-            <button class="w3-button w3-xlarge w3-hide-medium w3-hide-large w3-mobile" id="navigacijaopen" style="color:white;" (click)="goggle()">{{ opened ? '&times;' : '&#9776;' }}</button>
-            <div class="moje2 w3-indigo" id="navigacija" [ngClass]="!opened ? 'w3-hide-small' : ''" style="position:absolute;">
-                <!--<button class="w3-bar-item w3-button w3-large w3-hide-medium w3-hide-large w3-mobile" (click)="goggle()">Zatvori &times;</button>-->
-                <a class="w3-bar-item w3-button w3-mobile" routerLink="" (click)="navigateToHome()">Naslovna</a>
-                <!--<a class="w3-bar-item w3-button w3-mobile" routerLink="/services" (click)="navigateToServices()">Usluge</a>-->
-                <a class="w3-bar-item w3-button w3-mobile" routerLink="/prices" (click)="navigateToPrices()">Cjenik</a>
-                <a class="w3-bar-item w3-button w3-mobile" routerLink="/about" (click)="navigateToAbout()">O nama</a>
-                <a class="w3-bar-item w3-button w3-mobile" routerLink="/contact" (click)="navigateToContact()" style="float:right">Kontakt</a>
+    </div>
+     <div class="w3-bar w3-indigo w3-large">
+      <div class="container moje">
+          <!--<button class="w3-button w3-xlarge w3-mobile" id="navigacijaopen" style="color:white;" (click)="goggle()">{{ opened ? '╳' : '&#9776;' }}</button>-->
+          <div class="w3-indigo center-on-mobile" id="navigacija" [ngClass]="!opened ? '' : ''" style="max-width:1200px;width: fit-content;">
+              <a class="w3-button" routerLink="/" (click)="navigateToHome()" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active-link">Naslovna</a>
+              <a class="w3-button" routerLink="/prices" (click)="navigateToPrices()" routerLinkActive="active-link">Cjenik</a>
+              <a class="w3-button" routerLink="/contact" (click)="navigateToContact()" routerLinkActive="active-link">Kontakt</a>
+              <a class="w3-button" routerLink="/about" (click)="navigateToAbout()" routerLinkActive="active-link">O nama</a>
+          </div>
+      </div>
+  </div>
+
+<!--
+    <div class="w3-bar w3-indigo w3-large">
+        <div class="container moje">
+            <button class="w3-button w3-xlarge w3-hide-medium w3-hide-large w3-mobile" id="navigacijaopen" style="color:white;" (click)="goggle()">{{ opened ? '╳' : '&#9776;' }}</button>
+            <div class="w3-indigo" id="navigacija" [ngClass]="!opened ? 'w3-hide-small' : ''" style="max-width:1200px">
+                <a class="w3-bar-item w3-button w3-mobile" routerLink="/" (click)="navigateToHome()" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active-link">Naslovna</a>
+                <a class="w3-bar-item w3-button w3-mobile" routerLink="/prices" (click)="navigateToPrices()" routerLinkActive="active-link">Cjenik</a>
+                <a class="w3-bar-item w3-button w3-mobile" routerLink="/contact" (click)="navigateToContact()" routerLinkActive="active-link">Kontakt</a>
+                <a class="w3-bar-item w3-button w3-mobile" routerLink="/about" (click)="navigateToAbout()" routerLinkActive="active-link">O nama</a>
             </div>
         </div>
-    </div>	
-<!--<button (click)="goggle()">TEST</button>
-<div *ngIf="opened; else hahaa">
-    ahahaaa
-</div>
-<ng-template #hahaa>Content to render when condition is false.</ng-template>
-
-<div>
-    <label for="name">Hero name: </label>
-    <input id="name" [(ngModel)]="opened" placeholder="name">
-  </div>-->
-
-<!--<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>-->
+    </div>-->
