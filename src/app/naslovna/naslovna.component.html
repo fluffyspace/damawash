@@ -36,9 +36,13 @@
     <div class="centrirano w3-text-white w3-container w3-padding-32">
       <span class="w3-padding-large" #firsttext></span>
     </div>
+    <div class="bottom-center w3-text-white w3-container w3-padding-32">
+      <span class="w3-padding-large" style="font-size:20px">{{slideIndex+1}}/{{images.length-1}}</span>
+    </div>
   </div>
 <!--<button class="w3-button w3-light-grey noselection w3-display-left" onclick="plusDivs(-1)">❮</button>
 <button class="w3-button w3-light-grey noselection w3-display-right" onclick="plusDivs(+1)">❯</button>-->
+<div class="progress-bar" [style.width]="((precentage/timeDelay)*100) + '%'"></div>
 </div>
     
 <div class="container w3-margin-bottom moje"  style="text-align: center;">

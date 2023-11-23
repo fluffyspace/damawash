@@ -13,6 +13,10 @@ export class NaslovnaComponent implements OnInit {
   @ViewChild('firstimage') image: ElementRef<HTMLInputElement> | undefined;
   @ViewChild('firsttext') text: ElementRef<HTMLInputElement> | undefined;
   
+  timeDelay = 2000
+  updateInterval = 10
+  timeStart = Date.now()
+  precentage = 0;
   images: string[] = [
     
     'before_after3.jpg'
@@ -33,14 +37,22 @@ export class NaslovnaComponent implements OnInit {
   texts: string[] = [];
 
   ngOnInit(): void {
-    interval(2000).subscribe(() => this.carousel())
+    interval(this.timeDelay).subscribe(() => this.carousel())
+    interval(this.updateInterval).subscribe(() => this.updateProgressBar())
   }
 
   slideIndex = 0;
+  updateProgressBar(): void {
+    let dateNow = Date.now()
+    this.precentage += (dateNow - this.timeStart)
+    this.timeStart = dateNow;
+  }
 
   carousel(): void {
+    this.precentage = 0;
+    this.timeStart = Date.now()
     this.slideIndex++;
-    if (this.slideIndex >= this.images.length) {this.slideIndex = 0}
+    if (this.slideIndex >= this.images.length-1) {this.slideIndex = 0}
     if(this.image){
       this.image.nativeElement.src = 'assets/images/' + this.images[this.slideIndex];
     }
