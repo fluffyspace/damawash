@@ -9,7 +9,7 @@ import { UslugeComponent } from './usluge/usluge.component';
 
 const routes: Routes = [
   { path: '', component: NaslovnaComponent, pathMatch:'full', title: 'Dubinsko čišćenje – damawash' },
-  { path: 'services', component: UslugeComponent, title: 'Usluge čišćenja – damawash' },
+  /*{ path: 'services', component: UslugeComponent, title: 'Usluge čišćenja – damawash' },*/
   { path: 'contact', component: ContactComponent, title: 'Kontakt – damawash' },
   { path: 'prices', component: PricesComponent, title: 'Cjenik – damawash' },
   { path: 'about', component: AboutComponent, title: 'O nama – damawash' },

@@ -39,7 +39,7 @@ export class NaslovnaComponent implements OnInit {
 
   ngOnInit(): void {
     interval(this.timeDelay).subscribe(() => this.carousel())
-    interval(this.updateInterval).subscribe(() => this.updateProgressBar())
+    //interval(this.updateInterval).subscribe(() => this.updateProgressBar())
   }
 
   slideIndex = 0;
